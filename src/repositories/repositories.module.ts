@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from '../app/app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import {MatCardModule} from '@angular/material/card';
 
 // components
 import * as components from './components';
@@ -27,12 +26,11 @@ import * as fromDirectives from './directives';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxSpinnerModule,
-    MatCardModule
+    NgxSpinnerModule
   ],
   declarations: [...components.components, ...containers.containers, ...pipes.pipes, ...fromDirectives.directives],
   exports: [...components.components, ...containers.containers],
   providers: [...services.services]
 })
 
-export class ComponentsModule {}
+export class RepositoriesModule {}

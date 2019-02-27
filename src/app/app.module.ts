@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ComponentsModule} from '../repositories/components.module';
+import {RepositoriesModule} from '../repositories/repositories.module';
 import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
@@ -13,7 +13,7 @@ import {APP_BASE_HREF} from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComponentsModule
+    RepositoriesModule
   ],
   providers: [
     [{provide: APP_BASE_HREF, useValue: '/'}]

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {DashboardComponent} from '../repositories/components/dashboard/dashboard.component';
-import {FavoritesComponent} from '../repositories/components/favorites/favorites.component';
+import {DashboardComponent} from '../repositories/components';
+import {FavoritesComponent} from '../repositories/components';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
