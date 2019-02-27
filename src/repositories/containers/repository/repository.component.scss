@@ -1,0 +1,91 @@
+.repository{
+  padding: 20px;
+  min-width: 620px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background: #fff;
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-content{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .avatar{
+        img{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+      .repo-info{
+        margin-left: 15px;
+        .repository-url{
+          text-decoration: none;
+          color: #586069;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .right-content{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .language{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-right: 50px;
+        width: 200px;
+        div{
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+      }
+      .repo-rating{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 80px;
+        i{
+          color: darkkhaki;
+          margin-right: 5px;
+        }
+        h3{
+          color: #586069;
+        }
+      }
+    }
+
+  }
+  .content{
+    margin-top: 15px;
+    .button{
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      button.add{
+        outline: none;
+        width: 120px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 14px;
+        background-color: #3f51b5;
+        color: #fff;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

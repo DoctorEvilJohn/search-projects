@@ -1,0 +1,41 @@
+<div class="dashboard">
+
+  <ngx-spinner
+    bdOpacity = 0.9
+    bdColor = "#78d6ff"
+    size = "large"
+    color = "#fff"
+    type = "ball-spin-clockwise"
+    fullScreen = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+
+  <div class="example-form">
+    <input type="text" placeholder="Type repository" [value]="searchString" #searchInput [(ngModel)]="searchString" [ngModelOptions]="{standalone: true}"/>
+    <div class="filter" *ngIf="repositories.length">
+      <div class="filter-header" (click)="showFilter = !showFilter">
+        <i class="fa fa-filter"></i>
+      </div>
+      <div class="filter-content" *ngIf="showFilter">
+        <div class="languages-content">
+          <div class="language" *ngFor="let language of languages" (click)="languageFilter = language; showFilter = false">
+            <h3 class="language-name"> {{ language }}</h3>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="repositories" *ngIf="repositories.length">
+    <app-repository
+      *ngFor="let repository of repositories | languageFilter: languageFilter"
+      [dashboard]="true"
+      [repository]="repository"
+      (selected)="addToFavorites($event)">
+    </app-repository>
+  </div>
+
+  <p class="no-items" *ngIf="!repositories.length">This search did not produce any result.</p>
+</div>

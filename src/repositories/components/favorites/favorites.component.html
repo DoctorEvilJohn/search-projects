@@ -1,0 +1,8 @@
+<div class="favorites">
+  <p class="no-items" *ngIf="!favorites.length">Here is no items added yet...</p>
+  <app-repository
+    *ngFor="let favorite of favorites"
+    [repository]="favorite"
+    [dashboard]="false">
+  </app-repository>
+</div>
